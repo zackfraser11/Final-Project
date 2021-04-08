@@ -42,6 +42,72 @@ var drawBitmoji = function (bodyx,bodyy,bitHeight) {
     drawBitmojiBody(bodyx,bodyy,bitHeight);
 };
 
+var drawHead = function(bodyX,bodyY,bodyH){
+var p = bodyH/100;
+    fill(173, 133, 90);
+    noStroke();
+    ellipse(bodyX+104*p,bodyY+70*p,75*p,90*p);//face
+    
+    fill(255, 255, 255);
+    ellipse(bodyX+90*p,bodyY+65*p,20*p,20*p); //left balleye
+    
+    fill(255, 255, 255);
+    ellipse(bodyX+116*p,bodyY+65*p,20*p,20*p); //rigth balleye
+    
+    fill(0, 0, 0);
+    ellipse(bodyX+90*p,bodyY+65*p,5*p,5*p); //left eye
+
+    fill(0, 0, 0);
+    ellipse(bodyX+116*p,bodyY+65*p,5*p,5*p); //right eye
+    
+    noFill();
+    strokeWeight(2);
+    stroke(0, 0, 0);
+    ellipse(bodyX+116*p,bodyY+65*p,25*p,25*p);//left glass
+    
+    noFill();
+    strokeWeight(2);
+    stroke(0, 0, 0);
+    ellipse(bodyX+90*p,bodyY+65*p,25*p,25*p);//right glass
+}; //this Henry's bitmoji
+
+var drawBody = function(bodyX,bodyY,bodyH){
+var p = bodyH/100;
+    noStroke();
+    fill(163, 163, 163);
+    rect(bodyX+55*p,bodyY+115*p,100*p,100*p,30*p);//body
+    
+    fill(0, 0, 0);
+    arc(bodyX+103*p,bodyY+93*p, 20*p, 20*p, 1, 180);//smile
+    
+    rect(bodyX+70*p,bodyY+40*p,14*p,23*p,7*p);
+    /* side hair*/
+    rect(bodyX+124*p,bodyY+40*p,14*p,23*p,7*p);
+    
+    fill(45, 140, 69);
+    arc(bodyX+103*p,bodyY+42*p,60*p,60*p,180,360);
+    rect(bodyX+84*p,bodyY+42*p,40*p,11*p,-3*p);//hat
+    
+    fill(0, 0, 0);
+    text("HG",bodyX+58*p,bodyY+130*p,20*p,20*p);//initals 
+    
+    fill(255, 0, 0);
+    stroke(0, 0, 0);
+    strokeWeight(3);
+    line(bodyX+69*p,bodyY+60*p,bodyX+77*p,bodyY+69*p);
+    
+    fill(255, 0, 0);
+    stroke(0, 0, 0);
+    strokeWeight(3);
+    line(bodyX+140*p,bodyY+60*p,bodyX+128*p,bodyY+69*p);
+};
+
+var drawPerson = function(bodyX,bodyY,bodyH){
+    
+    drawHead(bodyX,bodyY,bodyH);
+    drawBody(bodyX,bodyY,bodyH);
+};
+
 var Button = function(config) {
     this.x = config.x || 0;
     this.y = config.y || 0;
@@ -102,6 +168,7 @@ draw = function() {
     textSize(18);
     text("By: Zack Fraser and Henry Gutierrez", 63, 77);
     drawBitmoji(135,128,50);
+    drawPerson(242,94,43);
     fill(0, 0, 0);
     text("Instructions:",151,205);
     textSize(14);
