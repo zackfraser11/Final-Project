@@ -1,8 +1,10 @@
-var scene = 2;
+var scene = 1;
 var rand = round(random(0.5, 46.5));
 var rand2 = round(random(0.5, 46.5));
 var computerScore = round(random(1,30));
 var userScore = 0;
+var leftCard;
+var rightCard;
 var drawBitmojiHead = function (bodyx,bodyy,bitHeight){
 var p = bitHeight/100;
 noStroke();
@@ -111,6 +113,7 @@ var drawPerson = function(bodyX,bodyY,bodyH){
     drawHead(bodyX,bodyY,bodyH);
     drawBody(bodyX,bodyY,bodyH);
 };
+
 var spades = function(x,y){
     fill(8, 8, 8);
     triangle(x+161/2,y+240/2,x+142/2,y+266/2,x+178/2,y+267/2);
@@ -142,7 +145,7 @@ var AceHearts = function(x,y){
     image(getImage("cute/Heart"),x+200,y+212,25,35);
     image(getImage("cute/Heart"),x+135,y+104,25,35);
     drawPerson(x+140,y+137,35);
-    userScore ++;
+    return 1;
 };
 
 var twoHearts = function(x,y){
@@ -155,7 +158,7 @@ var twoHearts = function(x,y){
     image(getImage("space/2"),x+138,y+111,20,20);
     image(getImage("space/2"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 2;
+    return 2;
 };
 
 var threeHearts = function(x,y){
@@ -168,7 +171,7 @@ var threeHearts = function(x,y){
     image(getImage("space/3"),x+138,y+111,20,20);
     image(getImage("space/3"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 3;
+    return 3;
 };
 
 var fourHearts = function(x,y){
@@ -181,7 +184,7 @@ var fourHearts = function(x,y){
     image(getImage("space/4"),x+138,y+111,20,20);
     image(getImage("space/4"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 4;
+    return 4;
 };
 
 var fiveHearts = function(x,y){
@@ -194,7 +197,7 @@ var fiveHearts = function(x,y){
     image(getImage("space/5"),x+138,y+111,20,20);
     image(getImage("space/5"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 5;
+    return 5;
 };
 
 var sixHearts = function(x,y){
@@ -207,7 +210,7 @@ var sixHearts = function(x,y){
     image(getImage("space/6"),x+138,y+111,20,20);
     image(getImage("space/6"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 6;
+    return 6;
 };
 
 var sevenHearts = function(x,y){
@@ -220,7 +223,7 @@ var sevenHearts = function(x,y){
     image(getImage("space/7"),x+138,y+111,20,20);
     image(getImage("space/7"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 7;
+    return 7;
 };
 
 var eightHearts = function(x,y){
@@ -233,7 +236,7 @@ var eightHearts = function(x,y){
     image(getImage("space/8"),x+138,y+111,20,20);
     image(getImage("space/8"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 8;
+    return 8;
 };
 
 var nineHearts = function(x,y){
@@ -246,7 +249,7 @@ var nineHearts = function(x,y){
     image(getImage("space/9"),x+138,y+111,20,20);
     image(getImage("space/9"),x+206,y+227,20,20);
     drawPerson(x+140,y+137,35);
-    userScore += 9;
+    return 9;
 };
 
 var JHearts = function(x,y) {
@@ -262,7 +265,7 @@ var JHearts = function(x,y) {
     textSize(30);
     text("J",x+177,y+220);
     text("J",x+246,y+323);
-    userScore += 10;
+    return 10;
 };
 
 var QHearts = function(x,y) {
@@ -277,7 +280,7 @@ var QHearts = function(x,y) {
     textSize(30);
     text("Q",x+177,y+220);
     text("Q",x+246,y+323);
-    userScore += 10;
+    return 10;
 };
 
 var KHearts = function(x,y) {
@@ -292,7 +295,7 @@ var KHearts = function(x,y) {
     textSize(30);
     text("K",x+177,y+220);
     text("K",x+246,y+323);
-    userScore += 10;
+    return 10;
 };
 
 var AceDiamonds = function(x,y){
@@ -303,7 +306,7 @@ var AceDiamonds = function(x,y){
     diamonds(x+-30,y+6);
     diamonds(x+39,y+109);
     drawBitmoji(x+175,y+157,35);
-    userScore ++;
+    return 1;
 };
 
 var twoDiamonds = function(x,y){
@@ -316,7 +319,7 @@ var twoDiamonds = function(x,y){
     image(getImage("space/2"),x+135,y+104,25,25);
     image(getImage("space/2"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 2;
+    return 2;
 };
 
 var threeDiamonds = function(x,y){
@@ -329,7 +332,7 @@ var threeDiamonds = function(x,y){
     image(getImage("space/3"),x+135,y+104,25,25);
     image(getImage("space/3"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 3;
+    return 3;
 };
 
 var fourDiamonds = function(x,y){
@@ -342,7 +345,7 @@ var fourDiamonds = function(x,y){
     image(getImage("space/4"),x+135,y+104,25,25);
     image(getImage("space/4"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 4;
+    return 4;
 };
 
 var fiveDiamonds = function(x,y){
@@ -355,7 +358,7 @@ var fiveDiamonds = function(x,y){
     image(getImage("space/5"),x+135,y+104,25,25);
     image(getImage("space/5"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 5;
+    return 5;
 };
 
 var sixDiamonds = function(x,y){
@@ -368,7 +371,7 @@ var sixDiamonds = function(x,y){
     image(getImage("space/6"),x+135,y+104,25,25);
     image(getImage("space/6"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 6;
+    return 6;
 };
 
 var sevenDiamonds = function(x,y){
@@ -381,7 +384,7 @@ var sevenDiamonds = function(x,y){
     image(getImage("space/7"),x+135,y+104,25,25);
     image(getImage("space/7"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 7;
+    return 7;
 };
 
 var eightDiamonds = function(x,y){
@@ -394,7 +397,7 @@ var eightDiamonds = function(x,y){
     image(getImage("space/8"),x+135,y+104,25,25);
     image(getImage("space/8"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 8;
+    return 8;
 };
 
 var nineDiamonds = function(x,y){
@@ -407,23 +410,23 @@ var nineDiamonds = function(x,y){
     image(getImage("space/9"),x+135,y+104,25,25);
     image(getImage("space/9"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+157,35);
-    userScore += 9;
+    return 9;
 };
 
 var JDiamonds = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawPerson(x+160,y+256,35);
-    drawPerson(x+205,y+198,35);
-    diamonds(x+13,y+112);
-    diamonds(x+83,y+160);
+    rect(x+169,y+100,100,149);
+    drawPerson(x+160,y+169,35);
+    drawPerson(x+205,y+110,35);
+    diamonds(x+13,y+28); 
+    diamonds(x+83,y+84);
     fill(255, 0, 26);
     textSize(30);
-    text("J",x+177,y+220);
-    text("J",x+246,y+323);
-    userScore += 10;
+    text("J",x+177,y+106);
+    text("J",x+246,y+214);
+    return 10;
 };
 
 var QDiamonds = function(x,y) {
@@ -438,7 +441,7 @@ var QDiamonds = function(x,y) {
     text("Q",x+246,y+323);
     diamonds(x+13,y+112);
     diamonds(x+83,y+160);
-    userScore += 10;
+    return 10;
 };
 
 var KDiamonds = function(x,y) {
@@ -454,7 +457,7 @@ var KDiamonds = function(x,y) {
     textSize(30);
     text("K",x+177,y+220);
     text("K",x+246,y+323);
-    userScore += 10;
+    return 10;
 };
 
 var Aceclubs = function(x,y){
@@ -466,7 +469,7 @@ var Aceclubs = function(x,y){
     clubs(x+37,y+-119,30);
     clubs(x+87,y+-19);
     drawPerson(x+142,y+140,34);
-    userScore ++;
+    return 1;
 };
 
 var twoclubs = function(x,y){
@@ -480,7 +483,7 @@ var twoclubs = function(x,y){
     image(getImage("space/2"),x+135,y+104,25,25);
     image(getImage("space/2"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 2;
+    return 2;
 };
 
 var threeclubs = function(x,y){
@@ -494,7 +497,7 @@ var threeclubs = function(x,y){
     image(getImage("space/3"),x+135,y+104,25,25);
     image(getImage("space/3"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 3;
+    return 3;
 };
 
 var fourclubs = function(x,y){
@@ -508,7 +511,7 @@ var fourclubs = function(x,y){
     image(getImage("space/4"),x+135,y+104,25,25);
     image(getImage("space/4"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 4;
+    return 4;
 };
 
 var fiveclubs = function(x,y){
@@ -522,7 +525,7 @@ var fiveclubs = function(x,y){
     image(getImage("space/5"),x+135,y+104,25,25);
     image(getImage("space/5"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 5;
+    return 5;
 };
 
 var sixclubs = function(x,y){
@@ -536,7 +539,7 @@ var sixclubs = function(x,y){
     image(getImage("space/6"),x+135,y+104,25,25);
     image(getImage("space/6"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 6;
+    return 6;
 };
 
 var sevenclubs = function(x,y){
@@ -550,7 +553,7 @@ var sevenclubs = function(x,y){
     image(getImage("space/7"),x+135,y+104,25,25);
     image(getImage("space/7"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 7;
+    return 7;
 };
 
 var eightclubs = function(x,y){
@@ -564,7 +567,7 @@ var eightclubs = function(x,y){
     image(getImage("space/8"),x+135,y+104,25,25);
     image(getImage("space/8"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 8;
+    return 8;
 };
 
 var nineclubs = function(x,y){
@@ -578,7 +581,7 @@ var nineclubs = function(x,y){
     image(getImage("space/9"),x+135,y+104,25,25);
     image(getImage("space/9"),x+204,y+223,25,25);
     drawPerson(x+142,y+140,34);
-    userScore += 9;
+    return 9;
 };
 
 var JClubs = function(x,y) {
@@ -595,7 +598,7 @@ var JClubs = function(x,y) {
     fill(0, 0, 0);
     clubs(x+67,y+-6);
     clubs(x+134,y+37);
-    userScore += 10;
+    return 10;
 };
 
 var QClubs = function(x,y) {
@@ -612,7 +615,7 @@ var QClubs = function(x,y) {
     fill(0, 0, 0);
     clubs(x+67,y+-6);
     clubs(x+134,y+37);
-    userScore += 10;
+    return 10;
 };
 
 var KClubs = function(x,y) {
@@ -629,7 +632,7 @@ var KClubs = function(x,y) {
     fill(0, 0, 0);
     clubs(x+67,y+-6);
     clubs(x+134,y+37);
-    userScore += 10;
+    return 10;
 };
 
 var Acespades = function(x,y){
@@ -641,7 +644,7 @@ var Acespades = function(x,y){
     spades(x+128,y+90);
     spades(x+68,y+-11);
     drawBitmoji(x+173,y+156,34);
-    userScore ++;
+    return 1;
 };
 
 var twospades = function(x,y){
@@ -654,7 +657,7 @@ var twospades = function(x,y){
     image(getImage("space/2"),x+135,y+104,25,25);
     image(getImage("space/2"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 2;
+    return 2;
 };
 
 var threespades = function(x,y){
@@ -667,7 +670,7 @@ var threespades = function(x,y){
     image(getImage("space/3"),x+135,y+104,25,25);
     image(getImage("space/3"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 3;
+    return 3;
 };
 
 var fourspades = function(x,y){
@@ -680,7 +683,7 @@ var fourspades = function(x,y){
     image(getImage("space/4"),x+135,y+104,25,25);
     image(getImage("space/4"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 4;
+    return 4;
 };
 
 var fivespades = function(x,y){
@@ -693,7 +696,7 @@ var fivespades = function(x,y){
     image(getImage("space/5"),x+135,y+104,25,25);
     image(getImage("space/5"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 5;
+    return 5;
 };
 
 var sixspades = function(x,y){
@@ -706,7 +709,7 @@ var sixspades = function(x,y){
     image(getImage("space/6"),x+135,y+104,25,25);
     image(getImage("space/6"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 6;
+    return 6;
 };
 
 var sevenspades = function(x,y){
@@ -719,7 +722,7 @@ var sevenspades = function(x,y){
     image(getImage("space/7"),x+135,y+104,25,25);
     image(getImage("space/7"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 7;
+    return 7;
 };
 
 var eightspades = function(x,y){
@@ -732,7 +735,7 @@ var eightspades = function(x,y){
     image(getImage("space/8"),x+135,y+104,25,25);
     image(getImage("space/8"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 8;
+    return 8;
 };
 
 var ninespades = function(x,y){
@@ -745,7 +748,7 @@ var ninespades = function(x,y){
     image(getImage("space/9"),x+135,y+104,25,25);
     image(getImage("space/9"),x+204,y+223,25,25);
     drawBitmoji(x+175,y+150,32);
-    userScore += 9;
+    return 9;
 };
 
 var Jspades = function(x,y) {
@@ -762,7 +765,7 @@ var Jspades = function(x,y) {
     text("J",x+246,y+323);
     spades(x+107,y+104);
     spades(x+170,y+152);
-    userScore += 10;
+    return 10;
 };
 
 var Qspades = function(x,y) {
@@ -779,7 +782,7 @@ var Qspades = function(x,y) {
     text("Q",x+241,y+324);
     spades(x+107,y+104);
     spades(x+170,y+152);
-    userScore += 10;
+    return 10;
 };
 
 var Kspades = function(x,y) {
@@ -796,7 +799,7 @@ var Kspades = function(x,y) {
     text("K",x+246,y+323);
     spades(x+107,y+104);
     spades(x+170,y+152);
-    userScore += 10;
+    return 10;
 };
 
 var allCards = [Aceclubs, twoclubs,threeclubs,fourclubs,fiveclubs,sixclubs,sevenclubs, eightclubs,nineclubs,JClubs,QClubs,KClubs, AceHearts, twoHearts,threeHearts,fourHearts,fiveHearts,sixHearts,sevenHearts,eightHearts,nineHearts,JHearts,QHearts,KHearts, AceDiamonds, twoDiamonds,threeDiamonds,fourDiamonds,fiveDiamonds,sixDiamonds,sevenDiamonds, eightDiamonds,nineDiamonds,JDiamonds,QDiamonds,KDiamonds, Acespades, twospades,threespades,fourspades,fivespades,sixspades,sevenspades, eightspades,ninespades,Jspades,Qspades,Kspades];
@@ -812,7 +815,11 @@ var Button = function(config) {
 
 //Draw method for the Button
 Button.prototype.draw = function() {
-    fill(25, 250, 111);
+    stroke(0, 0, 0);
+    if(scene === 1){
+        fill(25, 250, 111);
+    }
+    else{fill(255, 0, 0);}
     rect(this.x, this.y, this.width, this.height, 5);
     fill(0, 0, 0);
     textSize(19);
@@ -847,28 +854,36 @@ var btn1 = new Button({
 });
 
 var btn2 = new Button({
-    x: 150,
-    y: 324,
+    x: 55,
+    y: 335,
     width: 118,
-    label: "Start Game",
+    label: "Left Card",
     onClick: function() {
-        //scene = 2;
+        userScore += leftCard;
+        rand = round(random(0.5, 46.5));
+        leftCard = allCards[rand](-95,-10);
     }
 });
 
 var btn3 = new Button({
-    x: 150,
-    y: 324,
+    x: 220,
+    y: 335,
     width: 118,
-    label: "Start Game",
+    label: "Right Card",
     onClick: function() {
-        //scene = 2;
+        userScore += rightCard;
+        rand2 = round(random(0.5, 46.5));
+        rightCard = allCards[rand2](61,-9);
     }
 });
  
 mouseClicked = function() {
     if(scene === 1) {
         btn1.handleMouseClick();
+    }
+    else if(scene === 2){
+        btn2.handleMouseClick();
+        btn3.handleMouseClick();
     }
 };
 /*
@@ -896,8 +911,11 @@ draw = function() {
         textSize(30);
         fill(255, 0, 0);
         text("Computers Score: " + computerScore , 20,25);
-        allCards[rand](-95,-10);
-        allCards[rand2](61,-9);
+        text("Your Score: " + userScore , 20,298);
+        leftCard = allCards[rand](-95,-10);
+        rightCard = allCards[33](61,-9);
+        btn2.draw();
+        btn3.draw();
         
    }
 };
