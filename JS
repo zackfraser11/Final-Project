@@ -1,10 +1,11 @@
-var scene = 1;
-var rand = round(random(0.5, 46.5));
+var scene = 1;//The game screen
+var rand = round(random(0.5, 46.5));//these allow me to have two random cards at a time
 var rand2 = round(random(0.5, 46.5));
-var computerScore = round(random(1,30));
-var userScore = 0;
-var leftCard;
-var rightCard;
+var computerScore = round(random(16,30));//this is the computer score
+var userScore = 0;//this is your score
+var leftCard;//this is used for the cards on the left
+var rightCard;//this is used for the cards on the right
+var turns = 0;//this is useed for every click
 var drawBitmojiHead = function (bodyx,bodyy,bitHeight){
 var p = bitHeight/100;
 noStroke();
@@ -29,7 +30,7 @@ bezier(bodyx-(bitHeight/100*2), bodyy+(bitHeight/100*6), bodyx+(bitHeight/100*22
 fill(229, 109, 126); //Lip color
 arc(bodyx+(bitHeight/100*1), bodyy+(bitHeight/100*33), (bitHeight/100*25), (bitHeight/100*6), (bitHeight/100*1), (bitHeight/100*180)); //Lips
 line(bodyx+(bitHeight/100*12), bodyy+(bitHeight/100*33), bodyx-(bitHeight/100*12), bodyy+(bitHeight/100*33)); //Top of mouth
-};
+};//this is Zack's bitmoji
 
 var drawBitmojiBody = function (bodyx,bodyy,bitHeight){
 var p = bitHeight/100;
@@ -120,7 +121,7 @@ var spades = function(x,y){
     arc(x+156/2,y+266/2,15,15,90,180);
     arc(x+163/2,y+266/2,15,15,0,90);
     rect(x+153/2,y+266/2,6,13);
-};
+};//this makes the design for the spade cards
 
 var clubs = function(x,y){
     arc(x+113,y+245,10,10,90,270);
@@ -128,14 +129,14 @@ var clubs = function(x,y){
     arc(x+125,y+245,10,10,-90,90);
     rect(x+113,y+240,13,10);
     rect(x+115,y+248,7,8);
-};
+};//this makes the design for the club cards
 
 var diamonds = function(x,y){
 fill(255, 0, 0);
 noStroke();
 triangle(x+350/2,y+267/2,x+361/2,y+248/2,x+339/2,y+248/2);
 triangle(x+350/2,y+230/2,x+361/2,y+248/2,x+339/2,y+248/2);
-};
+};//this makes the design for the diamond cards
 
 var AceHearts = function(x,y){
     fill(255, 255, 255);
@@ -145,8 +146,8 @@ var AceHearts = function(x,y){
     image(getImage("cute/Heart"),x+235,y+212,25,35);
     image(getImage("cute/Heart"),x+180,y+104,25,35);
     drawPerson(x+180,y+140,34);
-    return 1;
-};
+    return 1;//this is what every card has at the buttom for its value
+};//lines 141 to 300 make the heart cards 
 
 var twoHearts = function(x,y){
     fill(255, 255, 255);
@@ -307,7 +308,7 @@ var AceDiamonds = function(x,y){
     diamonds(x+75,y+109);
     drawBitmoji(x+220,y+157,35);
     return 1;
-};
+};//lines 302 to 462 are for the diamond cards
 
 var twoDiamonds = function(x,y){
     fill(255, 255, 255);
@@ -470,7 +471,7 @@ var Aceclubs = function(x,y){
     clubs(x+130,y+-20);
     drawPerson(x+180,y+140,34);
     return 1;
-};
+};//lines 464 to 637 are for the club cards 
 
 var twoclubs = function(x,y){
     fill(255, 255, 255);
@@ -645,7 +646,7 @@ var Acespades = function(x,y){
     spades(x+110,y+-5);
     drawBitmoji(x+220,y+150,35);
     return 1;
-};
+};// lines 639 to 804 are for the spade cards
 
 var twospades = function(x,y){
     fill(255, 255, 255);
@@ -802,7 +803,7 @@ var Kspades = function(x,y) {
     return 10;
 };
 
-var allCards = [Aceclubs, twoclubs,threeclubs,fourclubs,fiveclubs,sixclubs,sevenclubs, eightclubs,nineclubs,JClubs,QClubs,KClubs, AceHearts, twoHearts,threeHearts,fourHearts,fiveHearts,sixHearts,sevenHearts,eightHearts,nineHearts,JHearts,QHearts,KHearts, AceDiamonds, twoDiamonds,threeDiamonds,fourDiamonds,fiveDiamonds,sixDiamonds,sevenDiamonds, eightDiamonds,nineDiamonds,JDiamonds,QDiamonds,KDiamonds, Acespades, twospades,threespades,fourspades,fivespades,sixspades,sevenspades, eightspades,ninespades,Jspades,Qspades,Kspades];
+var allCards = [Aceclubs, twoclubs,threeclubs,fourclubs,fiveclubs,sixclubs,sevenclubs, eightclubs,nineclubs,JClubs,QClubs,KClubs, AceHearts, twoHearts,threeHearts,fourHearts,fiveHearts,sixHearts,sevenHearts,eightHearts,nineHearts,JHearts,QHearts,KHearts, AceDiamonds, twoDiamonds,threeDiamonds,fourDiamonds,fiveDiamonds,sixDiamonds,sevenDiamonds, eightDiamonds,nineDiamonds,JDiamonds,QDiamonds,KDiamonds, Acespades, twospades,threespades,fourspades,fivespades,sixspades,sevenspades, eightspades,ninespades,Jspades,Qspades,Kspades];//this array helps the game choose between any of the 47 cards
 
 var Button = function(config) {
     this.x = config.x || 0;
@@ -851,7 +852,7 @@ var btn1 = new Button({
     onClick: function() {
         scene = 2;
     }
-});
+});//splash screen button
 
 var btn2 = new Button({
     x: 55,
@@ -859,11 +860,12 @@ var btn2 = new Button({
     width: 118,
     label: "Left Card",
     onClick: function() {
+        turns ++;
         userScore += leftCard;
         rand = round(random(0.5, 46.5));
         leftCard = allCards[rand](-95,-10);
     }
-});
+});//left card button
 
 var btn3 = new Button({
     x: 220,
@@ -871,11 +873,12 @@ var btn3 = new Button({
     width: 118,
     label: "Right Card",
     onClick: function() {
-        userScore += rightCard;
-        rand2 = round(random(0.5, 46.5));
-        rightCard = allCards[rand2](61,-9);
+        turns ++;//this is for every click it adds a turn
+        userScore += rightCard;//this is for every card adds their value to the score
+        rand2 = round(random(0.5, 46.5));//this helps it pick between one of the 47 cards
+        rightCard = allCards[rand2](61,-9);//this allows a card to be randomly picked
     }
-});
+});//right card button
  
 mouseClicked = function() {
     if(scene === 1) {
@@ -886,9 +889,7 @@ mouseClicked = function() {
         btn3.handleMouseClick();
     }
 };
-/*
-var allCards = [Aceclubs, twoclubs,threeclubs,fourclubs,fiveclubs,sixclubs,sevenclubs, eightclubs,nineclubs,JClubs,QClubs,KClubs, AceHearts, twoHearts,threeHearts,fourHearts,fiveHearts,sixHearts,sevenHearts,eightHearts,nineHearts,JHearts,QHearts,KHearts, AceDiamonds, twoDiamonds,threeDiamonds,fourDiamonds,fiveDiamonds,sixDiamonds,sevenDiamonds, eightDiamonds,nineDiamonds,JDiamonds,QDiamonds,KDiamonds, Acespades, twospades,threespades,fourspades,fivespades,sixspades,sevenspades, eightspades,ninespades,Jspades,Qspades,Kspades];
-*/
+
 draw = function() {
     if(scene === 1) { 
         background(255, 0, 0);
@@ -912,10 +913,31 @@ draw = function() {
         fill(255, 0, 0);
         text("Computers Score: " + computerScore , 20,25);
         text("Your Score: " + userScore , 20,298);
-        leftCard = allCards[rand](-95,-10);
+        leftCard = allCards[rand](-95,-10);//these are the two cards
         rightCard = allCards[rand2](61,-9);
         btn2.draw();
         btn3.draw();
-        
-   }
+        if(turns === 3){//after three turns it will say game over
+            textSize(30);
+            text("Game Over!",100,245);
+            if(userScore > computerScore && userScore < 21){//these are all the possible out comes
+                text("You Win!",100,265);
+            }
+            if(userScore < computerScore && computerScore > 21){
+                text("You Win!",100,265);
+            }
+            else if(userScore < computerScore && computerScore < 21){
+                text("You Lose!",100,265);
+            }
+            else if(userScore > computerScore && userScore > 21){
+                text("You Lose!",100,265);
+            }
+            else if(userScore === computerScore){
+                text("It's a tie!",100,265);
+            }
+            else if(userScore > 21 && computerScore > 21){
+                text("It's a tie!",100,260);
+            }
+        }
+    }
 };
