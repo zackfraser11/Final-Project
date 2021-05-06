@@ -1,7 +1,7 @@
 var scene = 1;//The game screen
 var rand = round(random(0.5, 46.5));//these allow me to have two random cards at a time
 var rand2 = round(random(0.5, 46.5));
-var computerScore = round(random(16,30));//this is the computer score
+var computerScore = round(random(8,30));//this is the computer score
 var userScore = 0;//this is your score
 var leftCard;//this is used for the cards on the left
 var rightCard;//this is used for the cards on the right
@@ -895,7 +895,7 @@ draw = function() {
         background(255, 0, 0);
         fill(0, 0, 0);
         textSize(50);
-        text("Blackjack",102,17);
+        text("21",184,17);
         textSize(18);
         text("By: Zack Fraser and Henry Gutierrez", 63, 77);
         drawBitmoji(135,128,50);
@@ -903,8 +903,9 @@ draw = function() {
         fill(0, 0, 0);
         text("Instructions:",151,205);
         textSize(14);
-        text("Combine the value of the cards and get as close to 21", 41, 254);
-        text("as you can! The closest to 21 at the end wins!",61,283);
+        text("You have three turns to get as close to 21 as you can.", 41, 254);
+        text("Choose a card to add the corresponding points to your score.", 17, 275);
+        text("If you are closest to 21 without going over, you win!",45,297);
         btn1.draw();
     }
     else if(scene === 2){
@@ -921,22 +922,22 @@ draw = function() {
             textSize(30);
             text("Game Over!",100,245);
             if(userScore > computerScore && userScore < 21){//these are all the possible out comes
-                text("You Win!",100,265);
+                text("You Win!",100,270);
             }
             if(userScore < computerScore && computerScore > 21){
-                text("You Win!",100,265);
+                text("You Win!",100,270);
             }
             else if(userScore < computerScore && computerScore < 21){
-                text("You Lose!",100,265);
+                text("You Lose!",100,270);
             }
             else if(userScore > computerScore && userScore > 21){
-                text("You Lose!",100,265);
+                text("You Lose!",100,270);
             }
             else if(userScore === computerScore){
-                text("It's a tie!",100,265);
+                text("It's a tie!",100,270);
             }
             else if(userScore > 21 && computerScore > 21){
-                text("It's a tie!",100,260);
+                text("It's a tie!",100,270);
             }
         }
     }
