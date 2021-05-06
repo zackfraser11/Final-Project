@@ -1,7 +1,7 @@
 var scene = 1;
 var rand = round(random(0.5, 46.5));
 var rand2 = round(random(0.5, 46.5));
-var computerScore = round(random(1,21));
+var computerScore = round(random(1,30));
 var userScore = 0;
 var leftCard;
 var rightCard;
@@ -141,10 +141,10 @@ var AceHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+212,25,35);
-    image(getImage("cute/Heart"),x+135,y+104,25,35);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+212,25,35);
+    image(getImage("cute/Heart"),x+180,y+104,25,35);
+    drawPerson(x+180,y+140,34);
     return 1;
 };
 
@@ -152,12 +152,12 @@ var twoHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/2"),x+138,y+111,20,20);
-    image(getImage("space/2"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/2"),x+180,y+110,25,25);
+    image(getImage("space/2"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 2;
 };
 
@@ -165,12 +165,12 @@ var threeHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/3"),x+138,y+111,20,20);
-    image(getImage("space/3"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/3"),x+180,y+110,25,25);
+    image(getImage("space/3"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 3;
 };
 
@@ -178,12 +178,12 @@ var fourHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/4"),x+138,y+111,20,20);
-    image(getImage("space/4"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/4"),x+180,y+110,25,25);
+    image(getImage("space/4"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 4;
 };
 
@@ -191,12 +191,12 @@ var fiveHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/5"),x+138,y+111,20,20);
-    image(getImage("space/5"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/5"),x+180,y+110,25,25);
+    image(getImage("space/5"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 5;
 };
 
@@ -204,12 +204,12 @@ var sixHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/6"),x+138,y+111,20,20);
-    image(getImage("space/6"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/6"),x+180,y+110,25,25);
+    image(getImage("space/6"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 6;
 };
 
@@ -217,12 +217,12 @@ var sevenHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/7"),x+138,y+111,20,20);
-    image(getImage("space/7"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/7"),x+180,y+110,25,25);
+    image(getImage("space/7"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 7;
 };
 
@@ -230,12 +230,12 @@ var eightHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/8"),x+138,y+111,20,20);
-    image(getImage("space/8"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/8"),x+180,y+110,25,25);
+    image(getImage("space/8"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 8;
 };
 
@@ -243,12 +243,12 @@ var nineHearts = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    image(getImage("cute/Heart"),x+200,y+198,25,35);
-    image(getImage("cute/Heart"),x+135,y+122,25,35);
-    image(getImage("space/9"),x+138,y+111,20,20);
-    image(getImage("space/9"),x+206,y+227,20,20);
-    drawPerson(x+140,y+137,35);
+    rect(x+169,y+105,100,149);
+    image(getImage("cute/Heart"),x+235,y+195,25,35);
+    image(getImage("cute/Heart"),x+175,y+125,25,35);
+    image(getImage("space/9"),x+180,y+110,25,25);
+    image(getImage("space/9"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 9;
 };
 
@@ -256,45 +256,45 @@ var JHearts = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+204,y+278,35);
-    drawBitmoji(x+235,y+210,35);
-    image(getImage("cute/Heart"),x+174,y+213,26,32);
-    image(getImage("cute/Heart"),x+242,y+273,26,32);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,35);
+    drawBitmoji(x+235,y+130,35);
+    image(getImage("cute/Heart"),x+175,y+110,26,32);
+    image(getImage("cute/Heart"),x+235,y+180,26,32);
     fill(255, 0, 26);
     textSize(30);
-    text("J",x+177,y+220);
-    text("J",x+246,y+323);
+    text("J",x+180,y+135);
+    text("J",x+240,y+205);
     return 10;
 };
 
 var QHearts = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
-    rect(x+169,y+189,100,149);
-    drawPerson(x+162,y+257,35);
-    drawPerson(x+207,y+191,35);
-    image(getImage("cute/Heart"),x+174,y+213,26,32);
-    image(getImage("cute/Heart"),x+242,y+273,26,32);
+    rect(x+169,y+105,100,149);
+    drawPerson(x+162,y+170,35);
+    drawPerson(x+207,y+110,35);
+    image(getImage("cute/Heart"),x+180,y+110,26,32);
+    image(getImage("cute/Heart"),x+235,y+180,26,32);
     fill(255, 0, 26);
     textSize(30);
-    text("Q",x+177,y+220);
-    text("Q",x+246,y+323);
+    text("Q",x+180,y+135);
+    text("Q",x+235,y+205);
     return 10;
 };
 
 var KHearts = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+204,y+278,35);
-    drawBitmoji(x+235,y+210,35);
-    image(getImage("cute/Heart"),x+174,y+213,26,32);
-    image(getImage("cute/Heart"),x+242,y+273,26,32);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,35);
+    drawBitmoji(x+235,y+130,35);
+    image(getImage("cute/Heart"),x+175,y+110,26,32);
+    image(getImage("cute/Heart"),x+235,y+180,26,32);
     fill(255, 0, 26);
     textSize(30);
-    text("K",x+177,y+220);
-    text("K",x+246,y+323);
+    text("K",x+180,y+135);
+    text("K",x+240,y+205);
     return 10;
 };
 
@@ -302,10 +302,10 @@ var AceDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-30,y+6);
-    diamonds(x+39,y+109);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+6);
+    diamonds(x+75,y+109);
+    drawBitmoji(x+220,y+157,35);
     return 1;
 };
 
@@ -313,12 +313,12 @@ var twoDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-28,y+21);
-    diamonds(x+40,y+87);
-    image(getImage("space/2"),x+135,y+104,25,25);
-    image(getImage("space/2"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/2"),x+180,y+110,25,25);
+    image(getImage("space/2"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 2;
 };
 
@@ -326,12 +326,12 @@ var threeDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-28,y+20);
-    diamonds(x+40,y+87);
-    image(getImage("space/3"),x+135,y+104,25,25);
-    image(getImage("space/3"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/3"),x+180,y+110,25,25);
+    image(getImage("space/3"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 3;
 };
 
@@ -339,12 +339,12 @@ var fourDiamonds = function(x,y){
     fill(255,255,255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-27,y+23);
-    diamonds(x+41,y+86);
-    image(getImage("space/4"),x+135,y+104,25,25);
-    image(getImage("space/4"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/4"),x+180,y+110,25,25);
+    image(getImage("space/4"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 4;
 };
 
@@ -352,12 +352,12 @@ var fiveDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-30,y+17);
-    diamonds(x+40,y+87);
-    image(getImage("space/5"),x+135,y+104,25,25);
-    image(getImage("space/5"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/5"),x+180,y+110,25,25);
+    image(getImage("space/5"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 5;
 };
 
@@ -365,12 +365,12 @@ var sixDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-29,y+21);
-    diamonds(x+39,y+88);
-    image(getImage("space/6"),x+135,y+104,25,25);
-    image(getImage("space/6"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/6"),x+180,y+110,25,25);
+    image(getImage("space/6"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 6;
 };
 
@@ -378,12 +378,12 @@ var sevenDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-29,y+18);
-    diamonds(x+38,y+88);
-    image(getImage("space/7"),x+135,y+104,25,25);
-    image(getImage("space/7"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/7"),x+180,y+110,25,25);
+    image(getImage("space/7"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 7;
 };
 
@@ -391,12 +391,12 @@ var eightDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-28,y+21);
-    diamonds(x+40,y+86);
-    image(getImage("space/8"),x+135,y+104,25,25);
-    image(getImage("space/8"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/8"),x+180,y+110,25,25);
+    image(getImage("space/8"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 8;
 };
 
@@ -404,12 +404,12 @@ var nineDiamonds = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    diamonds(x+-31,y+20);
-    diamonds(x+42,y+85);
-    image(getImage("space/9"),x+135,y+104,25,25);
-    image(getImage("space/9"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+157,35);
+    rect(x+169,y+105,100,149);
+    diamonds(x+15,y+20);
+    diamonds(x+75,y+90);
+    image(getImage("space/9"),x+180,y+110,25,25);
+    image(getImage("space/9"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+157,35);
     return 9;
 };
 
@@ -432,15 +432,15 @@ var JDiamonds = function(x,y) {
 var QDiamonds = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+206,y+280,35);
-    drawBitmoji(x+231,y+211,35);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,35);
+    drawBitmoji(x+235,y+130,35);
     fill(255, 0, 26);
     textSize(30);
-    text("Q",x+177,y+214);
-    text("Q",x+246,y+323);
-    diamonds(x+13,y+112);
-    diamonds(x+83,y+160);
+    text("Q",x+177,y+135);
+    text("Q",x+240,y+205);
+    diamonds(x+15,y+1);
+    diamonds(x+75,y+75);
     return 10;
 };
 
@@ -448,15 +448,15 @@ var KDiamonds = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawPerson(x+160,y+256,35);
-    drawPerson(x+205,y+198,35);
-    diamonds(x+13,y+112);
-    diamonds(x+83,y+160);
+    rect(x+169,y+105,100,149);
+    drawPerson(x+162,y+170,35);
+    drawPerson(x+207,y+110,35);
+    diamonds(x+15,y+1);
+    diamonds(x+70,y+75);
     fill(255, 0, 26);
     textSize(30);
-    text("K",x+177,y+220);
-    text("K",x+246,y+323);
+    text("K",x+180,y+135);
+    text("K",x+235,y+205);
     return 10;
 };
 
@@ -464,11 +464,11 @@ var Aceclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+37,y+-119,30);
-    clubs(x+87,y+-19);
-    drawPerson(x+142,y+140,34);
+    clubs(x+75,y+-120);
+    clubs(x+130,y+-20);
+    drawPerson(x+180,y+140,34);
     return 1;
 };
 
@@ -476,13 +476,13 @@ var twoclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/2"),x+135,y+104,25,25);
-    image(getImage("space/2"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/2"),x+180,y+110,25,25);
+    image(getImage("space/2"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 2;
 };
 
@@ -490,13 +490,13 @@ var threeclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/3"),x+135,y+104,25,25);
-    image(getImage("space/3"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/3"),x+180,y+110,25,25);
+    image(getImage("space/3"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 3;
 };
 
@@ -504,13 +504,13 @@ var fourclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/4"),x+135,y+104,25,25);
-    image(getImage("space/4"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/4"),x+180,y+110,25,25);
+    image(getImage("space/4"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 4;
 };
 
@@ -518,13 +518,13 @@ var fiveclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/5"),x+135,y+104,25,25);
-    image(getImage("space/5"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/5"),x+180,y+110,25,25);
+    image(getImage("space/5"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 5;
 };
 
@@ -532,13 +532,13 @@ var sixclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/6"),x+135,y+104,25,25);
-    image(getImage("space/6"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/6"),x+180,y+110,25,25);
+    image(getImage("space/6"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 6;
 };
 
@@ -546,13 +546,13 @@ var sevenclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/7"),x+135,y+104,25,25);
-    image(getImage("space/7"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/7"),x+180,y+110,25,25);
+    image(getImage("space/7"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 7;
 };
 
@@ -560,13 +560,13 @@ var eightclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/8"),x+135,y+104,25,25);
-    image(getImage("space/8"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/8"),x+180,y+110,25,25);
+    image(getImage("space/8"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 8;
 };
 
@@ -574,13 +574,13 @@ var nineclubs = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
-    image(getImage("space/9"),x+135,y+104,25,25);
-    image(getImage("space/9"),x+204,y+223,25,25);
-    drawPerson(x+142,y+140,34);
+    clubs(x+70,y+-90);
+    clubs(x+130,y+-40);
+    image(getImage("space/9"),x+180,y+110,25,25);
+    image(getImage("space/9"),x+240,y+225,25,25);
+    drawPerson(x+180,y+140,34);
     return 9;
 };
 
@@ -588,16 +588,16 @@ var JClubs = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+204,y+278,35);
-    drawBitmoji(x+235,y+210,35);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,35);
+    drawBitmoji(x+235,y+130,35);
     fill(10, 10, 10);
     textSize(30);
-    text("J",x+177,y+218);
-    text("J",x+246,y+323);
+    text("J",x+177,y+135);
+    text("J",x+246,y+205);
     fill(0, 0, 0);
-    clubs(x+67,y+-6);
-    clubs(x+134,y+37);
+    clubs(x+70,y+-120);
+    clubs(x+135,y+-50);
     return 10;
 };
 
@@ -605,16 +605,16 @@ var QClubs = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawPerson(x+161,y+256,35);
-    drawPerson(x+206,y+193,35);
+    rect(x+169,y+105,100,149);
+    drawPerson(x+161,y+170,35);
+    drawPerson(x+206,y+115,35);
     fill(0, 0, 0);
     textSize(30);
-    text("Q",x+177,y+220);
-    text("Q",x+246,y+323);
+    text("Q",x+180,y+110);
+    text("Q",x+240,y+190);
     fill(0, 0, 0);
-    clubs(x+67,y+-6);
-    clubs(x+134,y+37);
+    clubs(x+73,y+-90);
+    clubs(x+130,y+-10);
     return 10;
 };
 
@@ -622,30 +622,28 @@ var KClubs = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    drawBitmoji(x+142,y+140,35);
-    drawBitmoji(x+235,y+210,35);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,35);
+    drawBitmoji(x+235,y+130,35);
     fill(10, 10, 10);
     textSize(30);
-    text("K",x+135,y+104);
-    text("K",x+204,y+223);
+    text("K",x+177,y+135);
+    text("K",x+246,y+205);
     fill(0, 0, 0);
-    clubs(x+28,y+-103);
-    clubs(x+94,y+-35);
+    clubs(x+70,y+-120);
+    clubs(x+135,y+-50);
     return 10;
-    
-    
 };
 
 var Acespades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
+    rect(x+169,y+105,100,149);
     fill(0, 0, 0);
-    spades(x+128,y+90);
-    spades(x+68,y+-11);
-    drawBitmoji(x+173,y+156,34);
+    spades(x+170,y+95);
+    spades(x+110,y+-5);
+    drawBitmoji(x+220,y+150,35);
     return 1;
 };
 
@@ -653,12 +651,12 @@ var twospades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/2"),x+135,y+104,25,25);
-    image(getImage("space/2"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/2"),x+180,y+110,25,25);
+    image(getImage("space/2"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 2;
 };
 
@@ -666,12 +664,12 @@ var threespades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/3"),x+135,y+104,25,25);
-    image(getImage("space/3"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/3"),x+180,y+110,25,25);
+    image(getImage("space/3"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 3;
 };
 
@@ -679,12 +677,12 @@ var fourspades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/4"),x+135,y+104,25,25);
-    image(getImage("space/4"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/4"),x+180,y+110,25,25);
+    image(getImage("space/4"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 4;
 };
 
@@ -692,12 +690,12 @@ var fivespades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/5"),x+135,y+104,25,25);
-    image(getImage("space/5"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/5"),x+180,y+110,25,25);
+    image(getImage("space/5"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 5;
 };
 
@@ -705,12 +703,12 @@ var sixspades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/6"),x+135,y+104,25,25);
-    image(getImage("space/6"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/6"),x+180,y+110,25,25);
+    image(getImage("space/6"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 6;
 };
 
@@ -718,12 +716,12 @@ var sevenspades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/7"),x+135,y+104,25,25);
-    image(getImage("space/7"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/7"),x+180,y+110,25,25);
+    image(getImage("space/7"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 7;
 };
 
@@ -731,12 +729,12 @@ var eightspades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/8"),x+135,y+104,25,25);
-    image(getImage("space/8"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/8"),x+180,y+110,25,25);
+    image(getImage("space/8"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 8;
 };
 
@@ -744,12 +742,12 @@ var ninespades = function(x,y){
     fill(255, 255, 255);
     stroke(0, 0, 0);
     strokeWeight(3);
-    rect(x+129,y+100,100,149);
-    spades(x+65,y+17);
-    spades(x+135,y+69);
-    image(getImage("space/9"),x+135,y+104,25,25);
-    image(getImage("space/9"),x+204,y+223,25,25);
-    drawBitmoji(x+175,y+150,32);
+    rect(x+169,y+105,100,149);
+    spades(x+170,y+75);
+    spades(x+110,y+15);
+    image(getImage("space/9"),x+180,y+110,25,25);
+    image(getImage("space/9"),x+240,y+225,25,25);
+    drawBitmoji(x+220,y+150,32);
     return 9;
 };
 
@@ -757,16 +755,16 @@ var Jspades = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawPerson(x+163,y+259,32);
-    drawPerson(x+207,y+200,32);
+    rect(x+169,y+105,100,149);
+    drawPerson(x+163,y+170,32);
+    drawPerson(x+207,y+110,32);
     fill(255, 0, 26);
     textSize(30);
     fill(0, 0, 0);
-    text("J",x+177,y+220);
-    text("J",x+246,y+323);
-    spades(x+107,y+104);
-    spades(x+170,y+152);
+    text("J",x+180,y+135);
+    text("J",x+235,y+205);
+    spades(x+110,y+-10);
+    spades(x+165,y+60);
     return 10;
 };
 
@@ -774,16 +772,16 @@ var Qspades = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+200,y+279,32);
-    drawBitmoji(x+234,y+212,32);
+    rect(x+169,y+105,100,149);
+    drawBitmoji(x+204,y+200,32);
+    drawBitmoji(x+235,y+130,32);
     fill(255, 0, 26);
     textSize(30);
     fill(0, 0, 0);
-    text("Q",x+177,y+220);
-    text("Q",x+241,y+324);
-    spades(x+107,y+104);
-    spades(x+170,y+152);
+    text("Q",x+177,y+135);
+    text("Q",x+241,y+205);
+    spades(x+110,y+-10);
+    spades(x+170,y+60);
     return 10;
 };
 
@@ -791,16 +789,16 @@ var Kspades = function(x,y) {
     stroke(0, 0, 0);
     fill(255, 255, 255);
     strokeWeight(3);
-    rect(x+169,y+189,100,149);
-    drawBitmoji(x+145,y+219,32);
-    drawBitmoji(x+183,y+196,32);
+    rect(x+169,y+105,100,149);
+    drawPerson(x+163,y+170,32);
+    drawPerson(x+207,y+110,32);
     fill(255, 0, 26);
     textSize(30);
     fill(0, 0, 0);
-    text("K",x+177,y+220);
-    text("K",x+246,y+323);
-    spades(x+107,y+104);
-    spades(x+170,y+152);
+    text("K",x+180,y+135);
+    text("K",x+235,y+205);
+    spades(x+110,y+-10);
+    spades(x+165,y+60);
     return 10;
 };
 
@@ -819,11 +817,11 @@ var Button = function(config) {
 Button.prototype.draw = function() {
     stroke(0, 0, 0);
     if(scene === 1){
-        fill(78, 27, 150);
+        fill(25, 250, 111);
     }
     else{fill(255, 0, 0);}
     rect(this.x, this.y, this.width, this.height, 5);
-    fill(230, 255, 0);
+    fill(0, 0, 0);
     textSize(19);
     textAlign(LEFT, TOP);
     text(this.label, this.x+10, this.y+this.height/4);
@@ -846,8 +844,8 @@ Button.prototype.handleMouseClick = function() {
 
 //The start game button
 var btn1 = new Button({
-    x: 145,
-    y: 320,
+    x: 150,
+    y: 324,
     width: 118,
     label: "Start Game",
     onClick: function() {
@@ -878,23 +876,12 @@ var btn3 = new Button({
         rightCard = allCards[rand2](61,-9);
     }
 });
-
-var btn4 = new Button({
-    x: 143,
-    y: 251,
-    width: 120,
-    label: "How to play",
-    onClick: function() {
-        scene = 3;
-    }
-});
  
 mouseClicked = function() {
     if(scene === 1) {
         btn1.handleMouseClick();
-        btn4.handleMouseClick();
     }
-    if(scene === 2){
+    else if(scene === 2){
         btn2.handleMouseClick();
         btn3.handleMouseClick();
     }
@@ -904,46 +891,31 @@ var allCards = [Aceclubs, twoclubs,threeclubs,fourclubs,fiveclubs,sixclubs,seven
 */
 draw = function() {
     if(scene === 1) { 
-        background(64, 255, 0);
+        background(255, 0, 0);
         fill(0, 0, 0);
         textSize(50);
         text("Blackjack",102,17);
         textSize(18);
         text("By: Zack Fraser and Henry Gutierrez", 63, 77);
-        text("Play a hand of blackjack against the computer!", 20, 214);
         drawBitmoji(135,128,50);
         drawPerson(242,94,43);
         fill(0, 0, 0);
+        text("Instructions:",151,205);
+        textSize(14);
+        text("Combine the value of the cards and get as close to 21", 41, 254);
+        text("as you can! The closest to 21 at the end wins!",61,283);
         btn1.draw();
-        btn4.draw();
-        
     }
-    if(scene === 2){
-        background(0, 247, 255);
+    else if(scene === 2){
+        background(0, 255, 111);
         textSize(30);
         fill(255, 0, 0);
         text("Computers Score: " + computerScore , 20,25);
         text("Your Score: " + userScore , 20,298);
         leftCard = allCards[rand](-95,-10);
-        rightCard = allCards[33](61,-9);
+        rightCard = allCards[rand2](61,-9);
         btn2.draw();
         btn3.draw();
         
-   }
-   if(scene === 3){
-       background(255, 102, 0);
-       textSize(30);
-       fill(0, 0, 0);
-       text("Rules:", 150, 35);
-       textSize(15);
-       text("1.) Start with two random cards and a random score for", 7, 86);
-       text("the dealer.", 26, 117);
-       text("2.) If you aren't as close to 21 as you would like to be,", 7, 157);
-       text("draw another card.", 26, 190);
-       text("3.) Try to get as close to 21 as you can without going over.", 7, 230);
-       text("4.) If you go over 21, you lose!",7, 275);
-       text("5.) If you are closer to 21 than the dealer at the end of the",7, 319);
-       text("hand, you win!", 26, 353);
-       
    }
 };
